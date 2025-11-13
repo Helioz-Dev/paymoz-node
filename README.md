@@ -1,4 +1,4 @@
-# 💳 Payment Node Proxy
+# 💳 Paymoz Node Proxy
 
 Servidor simples e seguro em **Node.js** que protege a tua **API Key** e faz requisições seguras para a [PayMoz](https://paymoz.tech/).  
 Desenvolvido por: [Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1)
@@ -6,7 +6,7 @@ Desenvolvido por: [Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889
 ---
 
 ## 🧠 Introdução
-O **Payment Node Proxy** atua como intermediário entre o teu **aplicativo, site ou sistema** e a **API PayMoz**, garantindo que a tua `API_KEY` nunca seja exposta publicamente.
+O **Paymoz Node Proxy** atua como intermediário entre o teu **aplicativo, site ou sistema** e a **API PayMoz**, garantindo que a tua `API_KEY` nunca seja exposta publicamente.
 
 Ideal para:
 - 🌐 Aplicações **web** (React, Vue, etc.)
@@ -19,7 +19,7 @@ Ideal para:
 > Substitui o domínio abaixo pelo nome do teu serviço no Render:
 
 ```
-https://payment-node.onrender.com/payments
+https://paymoz-node.onrender.com/payments
 ```
 
 ---
@@ -64,7 +64,7 @@ Envia um pedido de pagamento para a PayMoz via proxy seguro.
 
 #### cURL
 ```bash
-curl -X POST https://payment-node.onrender.com/payments \
+curl -X POST https://paymoz-node.onrender.com/payments \
   -H "Content-Type: application/json" \
   -d '{
     "metodo": "mpesa",
@@ -158,7 +158,7 @@ npm start
 1. Vai em [https://render.com](https://render.com)
 2. Clica em **New + → Web Service**
 3. Escolhe **Deploy from GitHub**
-4. Liga ao nosso repositório (`payment-node`)
+4. Liga ao nosso repositório (`paymoz-node`)
 5. Define:
    - **Start Command:** `npm start`
    - **Environment Variable:** `API_KEY = tua chave PayMoz`
@@ -166,7 +166,7 @@ npm start
 
 Após o deploy, a URL pública será algo como:
 ```
-https://payment-node.onrender.com/payments
+https://paymoz-node.onrender.com/payments
 ```
 
 ---
@@ -174,7 +174,7 @@ https://payment-node.onrender.com/payments
 ## 🧩 Testar o endpoint
 
 ```bash
-curl -X POST https://payment-node.onrender.com/payments \
+curl -X POST https://paymoz-node.onrender.com/payments \
   -H "Content-Type: application/json" \
   -d '{
     "metodo": "mpesa",
