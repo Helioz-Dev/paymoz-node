@@ -53,20 +53,13 @@ Envia um pedido de pagamento para a PayMoz via proxy seguro.
 
 ### 🧩 Exemplo de requisição
 
-#### JavaScript (fetch)
-```js
-fetch("https://payment-node.onrender.com/payments", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    metodo: "mpesa",
+#### JSON
+```json
+{
+    metodo: "`mpesa` ou `emola`",
     valor: "10.00",
     numero_celular: "852233065"
-  })
-})
-  .then(res => res.json())
-  .then(console.log)
-  .catch(console.error);
+  }
 ```
 
 #### cURL
@@ -85,6 +78,7 @@ curl -X POST https://payment-node.onrender.com/payments \
 ## 📥 Respostas da API
 
 ### ✅ Sucesso (200)
+Quando um pedido de pagamento é processado com sucesso, a API retornará um código de status 200 OK e um corpo JSON com os detalhes da transação.
 ```json
 {
   "sucesso": true,
