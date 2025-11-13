@@ -56,10 +56,10 @@ Envia um pedido de pagamento para a PayMoz via proxy seguro.
 #### JSON
 ```json
 {
-    metodo: "`mpesa` ou `emola`",
-    valor: "10.00",
-    numero_celular: "852233065"
-  }
+    "metodo": "`mpesa` ou `emola`",
+    "valor": "10.00",
+    "numero_celular": "852233065"
+}
 ```
 
 #### cURL
