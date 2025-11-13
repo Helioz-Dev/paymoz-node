@@ -176,7 +176,11 @@ https://payment-node.onrender.com/payments
 ```bash
 curl -X POST https://payment-node.onrender.com/payments \
   -H "Content-Type: application/json" \
-  -d '{"metodo":"mpesa","valor":"5.00","numero_celular":"852233065"}'
+  -d '{
+    "metodo": "mpesa",
+    "valor": "10.00",
+    "numero_celular": "852233065"
+  }'
 ```
 
 Se receberes uma resposta JSON da PayMoz, o proxy está funcional ✅
