@@ -155,18 +155,14 @@ npm start
 
 ## 🧩 Como fazer deploy no Render
 
-1. Cria um repositório no GitHub com os arquivos:
-   - `server.js`
-   - `package.json`
-   - `README.md`
-2. Vai em [https://render.com](https://render.com)
-3. Clica em **New + → Web Service**
-4. Escolhe **Deploy from GitHub**
-5. Liga ao teu repositório (`payment-node`)
-6. Define:
+1. Vai em [https://render.com](https://render.com)
+2. Clica em **New + → Web Service**
+3. Escolhe **Deploy from GitHub**
+4. Liga ao nosso repositório (`payment-node`)
+5. Define:
    - **Start Command:** `npm start`
    - **Environment Variable:** `API_KEY = tua chave PayMoz`
-7. Clica **Deploy Web Service**
+6. Clica **Deploy Web Service**
 
 Após o deploy, a URL pública será algo como:
 ```
