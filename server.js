@@ -11,7 +11,7 @@ const API_KEY = process.env.API_KEY; // variável segura do Render
 
 app.post("/payments", async (req, res) => {
   const controller = new AbortController();
-  const timeoutMs = 30000; // 30 segundos de timeout
+  const timeoutMs = 50000; // 30 segundos de timeout
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
   try {
