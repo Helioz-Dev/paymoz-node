@@ -1,7 +1,7 @@
 # 💳 Payment Node Proxy
 
 Servidor simples e seguro em **Node.js** que protege a tua **API Key** e faz requisições seguras para a [PayMoz](https://paymoz.tech/).  
-Desenvolvido por: **Helioz Dev**
+Desenvolvido por: [Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1)
 
 ---
 
@@ -87,19 +87,56 @@ curl -X POST https://payment-node.onrender.com/payments \
 ### ✅ Sucesso (200)
 ```json
 {
-  "status": "success",
-  "mensagem": "Pagamento processado com sucesso",
-  "transacao_id": "PMZ123456789"
+  "sucesso": true,
+  "mensagem": "Pagamento processado com sucesso.",
+  "dados": {
+    "output_ResponseCode": "INS-0",
+    "output_ResponseDesc": "Request processed successfully",
+    "output_TransactionID": "7m2swkzme9y9",
+    "output_ConversationID": "8afbf904889f4e88a35e22ae7df796a7",
+    "output_ThirdPartyReference": "PAYMOZOAXCGF"
+  }
 }
 ```
 
-### ❌ Erro (400–500)
+### ❌ Erro (400 Bad Request)
+Ocorre quando faltam parâmetros obrigatórios ou os dados enviados são inválidos.
 ```json
 {
-  "erro": "Descrição do erro retornado pela PayMoz"
+  "erro": "Os campos metodo, valor e numero_celular são obrigatórios."
+}
+```
+Também pode ocorrer em caso de falha de comunicação com o provedor de pagamento (ex: timeout).
+```json
+{
+  "sucesso": false,
+  "erro": "Falha na comunicação com o M-Pesa (Erro 408)."
 }
 ```
 
+### ❌ Erro (401 Unauthorized)
+Ocorre quando a API Key não é fornecida ou é inválida.
+```json
+{
+  "detail": "API Key inválida ou não encontrada."
+}
+```
+
+### ❌ Erro (403 Forbidden)
+Ocorre se o utilizador autenticado não tiver permissão para realizar a ação (ex: plano expirado).
+```json
+{
+  "detail": "Você não tem permissão para realizar esta ação."
+}
+```
+
+### ❌ Erro (500 Internal Server)
+Ocorre quando vem do lado da plataforma inteira da Paymoz. A equipe é notificada automaticamente, mas se o problema persistir, por favor, entre em contacto com o suporte.
+```json
+{
+  "erro": "Ocorreu um erro interno inesperado."
+}
+```
 ---
 
 ## 🧠 Como funciona no Render
@@ -175,5 +212,5 @@ Se receberes uma resposta JSON da PayMoz, o proxy está funcional ✅
 ---
 
 ## 👨‍💻 Desenvolvido por
-**Helioz Dev** — soluções práticas e seguras para integração com PayMoz.  
+[Helioz Dev](https://api.whatsapp.com/send/?phone=258842834889&text&type=phone_number&app_absent=0&wame_ctl=1) — soluções práticas e seguras para integração com PayMoz.  
 > 💡 Personaliza livremente e integra facilmente nos teus próprios sistemas.
